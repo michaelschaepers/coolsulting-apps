@@ -1,14 +1,12 @@
-
 # ==========================================
 # DATEI: Waermepumpen_Auslegung.py
-# ZEITSTEMPEL: 10.02.2026 - 16:35 Uhr
-# VERSION: 3.7
+# ZEITSTEMPEL: 10.02.2026 - 17:50 Uhr
+# VERSION: 3.8
 #
 # ÄNDERUNGEN:
-# 1. LAYOUT DIAGRAMM: X-Achse in App und PDF gedreht (Kalt links, Warm rechts). Heizlast fällt nun von links nach rechts ab.
-# 2. LOGIK: Annotationen im Plotly-Diagramm an die neue Leserichtung angepasst.
-# 3. VERSIONING: App Version auf 3.7 hochgesetzt.
-# 4. BEIBEHALTEN: Striktes Header-Format, Logo & Text oben bündig (Y=10), Disclaimer mit geistigem Eigentum.
+# 1. TEXT: Platzhalter bei "Projekt / Kunde" auf "z.B.: Elke Muster" geändert.
+# 2. VERSIONING: App Version auf 3.8 hochgesetzt.
+# 3. BEIBEHALTEN: Striktes Header-Format, gedrehte X-Achse (Kalt -> Warm), Logo & Text oben bündig (Y=10), Disclaimer mit geistigem Eigentum.
 # ==========================================
 
 import streamlit as st
@@ -21,7 +19,7 @@ import numpy as np
 import tempfile
 
 # Globale Variable für die App-Version (wird in UI und PDF genutzt)
-APP_VERSION = "3.7"
+APP_VERSION = "3.8"
 
 # ==========================================
 # 1. PDF KLASSE
@@ -322,7 +320,7 @@ def main():
 
     c_proj, c_bearb = st.columns(2)
     with c_proj:
-        projekt = st.text_input("Projekt / Kunde", placeholder="z.B. Elektro Meindl GmbH", key="m1_projekt")
+        projekt = st.text_input("Projekt / Kunde", placeholder="z.B.: Elke Muster", key="m1_projekt")
     with c_bearb:
         bearbeiter = st.text_input("Bearbeiter / Firma", placeholder="Ihr Name / Firmenname", key="m1_bearbeiter")
         firma = ""
