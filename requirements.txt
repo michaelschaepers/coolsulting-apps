@@ -27,6 +27,7 @@ pydeck==0.9.1
 python-dateutil==2.9.0.post0
 pytz==2025.2
 referencing==0.37.0
+reportlab==4.4.9
 requests==2.32.5
 rpds-py==0.30.0
 six==1.17.0
@@ -40,3 +41,6 @@ tzdata==2025.3
 urllib3==2.6.3
 watchdog==6.0.0
 matplotlib
+openpyxl==3.1.2
+libsql-experimental
+python-docx==1.1.2
